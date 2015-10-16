@@ -1,0 +1,549 @@
+           --   /--/        _______        ______
+          |  | /  /        /   ___/       / __   \
+          |  |/  /        /   /          | |  |__|
+          |     |         |  |           | | _____
+          |  |\  \         \  \___       | |___| |
+	  |__| \__\ lausen  \_____| asio \_______/ ames
+
+		     is proud to present
+
+		     S	     N	     A	     K	      E
+
+                 |----------------|      |----------------|
+                 |                |      |                |
+                 |----|      |----|      |----|      |----|
+                      |      |                |      |
+                      |      |                |      |
+                      |      |                |      |
+                      |      |                |      |
+                      |      |                |      |
+                      |      |                |      |
+                      |      |                |      |
+                 |----|      |----|      |----|      |----|
+                 |                |      |                |
+                 |----------------|      |----------------|
+
+
+
+Whee! Snake 2 v1.3 is now released! Lots (or at least some) new things.
+
+Snake 2 was written by:
+
+Rolf Klausen <rolfk@romsdal.vgs.no>
+Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/
+Visit my casiopage: http://www2.romsdal.vgs.no/~rolfk/casio/
+
+This is Snake 2 version 1.3
+
+New in version 1.3:
+
+* Bug concerning numbers appearing on bricks fixed.
+* The snake now increases the speed when you finish the last level
+* You can now define the starting direction of the snake in each level file.
+  See the "how to write levels" file for more info on this.
+* Some minor big fixes
+
+New in version 1.2 (except from the other new things in Snake 2):
+
+* A setup program where you can modify different things in the game:
+	* Difficulty
+	* Speed
+	* Reset high score
+
+* Lives! You now have 5 lives (At normal difficulty). Easy = 7 lives, Hard
+	 = 3 lives.
+
+* Fixed bug concerning numbers appearing on bricks (#) which causes the
+snake to crash when you take the number. 
+
+New in version 1.1:
+Can't remember...but who cares?
+
+Thanx go out to:
+
+Hidetake Jo - I used a slightly modified version of his algorithm for
+efficient coordinate storing - without it I wouldn't been able to make the
+snake grow. And one more thing: The high score saving technique. Thanx!
+
+Yngve (a friend) for motivating me to write the game; he made me try even
+though I thought I couldn't do it. But I did it!
+
+Everyone who has downloaded, tried or played any of my games and everyone
+who has visited my homepage.
+
+And all my friends, family etc. (Wow! This starts to look like something
+                      		much bigger than a small calculator game...)
+
+*******************************************************************************
+
+Controls:
+8 - Up
+2 - Down
+4 - Left
+6 - Right
+5 - Pause
+EXE - Continue (after you have paused the game)
+
+When you are moving right you can't just press 4 and turn left. You have to
+move either up or down first, then left, and vice versa. The same applies
+to up and down movement. You probably understand... :)
+
+*******************************************************************************
+BTW here is a tip when typing in the levels:
+Use the function memory as a clipboard. Here's how:
+Type in one level. Then EDIT that level, go to the bottom, save it in
+function memory 1, 2, 3 or whatever. When you write a new level, then just
+recall the function mem where you saved your level!
+*******************************************************************************
+
+TO DO list:
+
+For v1.3:
+
+* Make it possible to define the starting direction of the snake on each
+level.
+
+Ideas for later versions:
+* Extra lives! Now and then a star (*) or something appears on the screen
+and if you take it you get an extra life.
+
+*******************************************************************************
+BUGS I don't know how to fix:
+
+* Sometimes, when you move the snake to the upper left corner (2,2) you
+crash even though there are no brick there. It has something to do with
+the Lists. Work-around: Avoid moving the snake to that point as fas as
+possible.
+
+*******************************************************************************
+
+Any comments or suggestions are always welcome.
+I am on the net every tuesday and thursday from 15.00 to 20.00 and
+wednesdays from 12.00 to 13.00. I only have internet access through my
+school, but I get FREE internet access there, so it is a nice offer. but
+anyway, if you send me a mail on a friday for example, I'm not able to
+read it until tuesday...
+
+*******************************************************************************
+
+Oh, one thing I came up with now:
+In Snake III , when and if I make it that far (I hope I will :), the game
+will be graphical , and you control a thin line only. I will try to make a
+version like that, but I'm not sure if I can do it... I hope the game will
+be faster and more fun to play if I make the game like that. The way it is
+now it is a bit limited, the screen isn't particularly big (21x7) and when
+you need the walls it is only 19x5 ... but I think it is a good game... :)
+
+************************************************************************
+The symbols:
+
+    ->                  This is the arrow located on the keyboard
+
+    =>                  The double arrow meaning "then".
+                        Press [shift]+[prgm] [F3] [F3]
+
+    <>                  Not equal
+                        Press [shift]+[prgm] [F6] [F3] [F2]
+
+    _                   The little triangle thing on the prgm menu
+                        Press [shift]+[prgm] [F5]
+
+    <=                  Less than or equal
+                        press [shift]+[prgm] [F6] [F3] [F6]
+
+    >=                  Greater than or equal
+                        Press [shift]+[prgm] [F6] [F3] [F5]
+
+    //                  This is a comment. Do not type it in.
+
+***************************************************************************
+
+WARNING: The program uses list 1 - 4 and Matrix A, so if you have
+important information in them then it may be erased!
+
+***************************************************************************
+VERY IMPORTANT NOTE! READ BEFORE PLAYING:
+Before you play the game for the first time you have to place a 0 in the
+first two cells of List 4, or create a program which contains the
+following text (without the quotes("")): "{0,0}->List 4" and run that
+program. IF YOU DO NOT DO THIS THEN THE GAME WON'T WORK.
+***************************************************************************
+
+EVEN MORE IMPORTANT NOTE!!!!!!!!! READ!!!!!!!!
+Before you start playing the game for the first time you have to do the
+following: Go to the main menu. Enter Matrix mode (press 3). With the
+cursor located on Matrix A type the following:
+
+7
+[EXE]
+21
+[EXE]
+[EXIT]
+
+Now the first line should read:
+Mat A        :   7x 21
+
+This is VERY IMPORTANT! If you don't do this then the game won't work!
+******************************************************************************
+
+
+@@PROG "SNAKE"          //create a program called snake
+Prog "SN INTRO"
+Lbl A
+List 3[2]->F				// controls speed
+List 3[3]->M				// number of lives left
+List 3[4]->C				// v1.3: add this!
+{0,F,M,C}->List 3			// v1.3: change this!
+1->@				// starting level
+9->r				// number of levels
+Lbl 9
+{2,2,2,2,2,2,2,2,2}->List 1		// 9 2's
+{2,2,2,2,2,2,2,2,2}->List 2
+0->A~Z
+2->A~B          		// starting coordinates
+6->C          			// direction. 6=left 4=right 8=up 2=down
+1->D~E	
+1->L				
+D+1->I				// I = length of snake.
+List 3[1]->P			// keeps track of your points
+List 3[2]->F			// keeps track of the speed
+List 3[3]->M			// keeps track of your lives
+@=1=>Prog "SNLEVEL1"
+@=2=>Prog "SNLEVEL2"
+@=3=>Prog "SNLEVEL3"
+@=4=>Prog "SNLEVEL4"
+@=5=>Prog "SNLEVEL5"
+@=6=>Prog "SNLEVEL6"
+@=7=>Prog "SNLEVEL7"
+@=8=>Prog "SNLEVEL8"
+@=9=>Prog "SNLEVEL9"
+Lbl B
+Int 21Ran#+1->J			// random coordintes for the number
+Int 7Ran#+1->K                  // same as above
+Mat A[K,J]=1=>Goto B		// v1.3: make sure they are AFTER the SNLEVELX lines
+ClrText
+For 1->S To 7
+For 1->T To 21
+Mat A[S,T]=1=>Locate T,S,"#"
+Next
+Next
+While 1=1			// Ever tried to change the value of 1?
+Getkey=62=>C<>8=>2->C
+Getkey=62=>C=8=>8->C
+Getkey=73=>C<>6=>4->C			// changes direction if you are
+Getkey=73=>C=6=>6->C                    // allowed to. You aint allowed
+Getkey=53=>C<>4=>6->C               	// to turn left if you are moving
+Getkey=53=>C=4=>4->C                 	// right, you have to move up or
+Getkey=64=>C<>2=>8->C                 	// down first, then left. The same
+Getkey=64=>C=2=>2->C                    // is with up and down.
+If Getkey=63
+Then While Getkey!=31
+Locate 8,1,"PAUSE"
+For 1->N To 10
+Next
+Locate 8,1,"     "
+WhileEnd
+Locate 8,1,"#####"
+IfEnd
+C=6=>A+1->A
+C=4=>A-1->A				// these increases the coordinates
+C=2=>B+1->B				// based on your direction
+C=8=>B-1->B
+For 1->G To F				// a delay loop, used to control
+Next					// speed
+Locate A,B,"O"			// you can change the O to another symbol
+Locate List 1[E],List 2[E]," "
+A->List 1[D]
+B->List 2[D]
+Mat A[B,A]=1=>Goto 6
+For 1->N To I-1			// check if you have run into yourself...
+D<>N=>List 1[D]=List 1[N]=>List 2[D]=List 2[N]=>Goto 6   
+Next
+If A=J And B=K			// check if you have eaten the number
+Then Int 21Ran#+1->J
+Int 7Ran#+1->K
+If Mat A[K,J]=1
+Then While Mat A[K,J]=1
+Int 21Ran#+1->J
+Int 7Ran#+1->K
+WhileEnd
+IfEnd
+I+1->I				// increase length
+P+(L*100)->P			// increase points
+L+1->L				// increase number
+If L>9				// have you eaten number 9?
+Then P->List 3[I]		// save your points
+@+1->@				// increase level
+@>r=>1->@
+@>r=>List 3[2]-10->List 3[2]	// v1.3: add this
+List 3[2]<0=>0->List 3[2]	// v1.3: add this
+Goto 9
+IfEnd
+Locate J,K,L			// write number on random coordinates
+Else Locate J,K,L
+IfEnd
+D+1->D
+E+1->E
+D>=I->1->D
+E>=I=>1->E
+WhileEnd
+Goto 7
+Lbl 6
+For 1->G To 5
+Locate A,B,"+"
+Locate A,B,"x"                // The multiplication sign
+Next
+Locate A,B,"O"
+For 1->G To 8
+Locate 8,4,"CRASH!"
+Locate 8,4,"      "
+Next
+For 1->G to 10			// upgrade from v1.1 to v1.2: ADD THIS!
+Next				// this one too!
+M-1->M
+M->List 3[3]
+Locate 7,4,"LIVES: "
+Locate 14,4,M
+While Getkey!=31
+WhileEnd
+M<1=>Goto 7
+Goto 9
+Lbl 7
+ClrText				// and this one!
+Locate 6,4,"GAME OVER"
+Locate 4,5,"YOUR SCORE:"	// 1.2: Change to this
+Locate 16,5,P			// and change this too
+(Dim List 4)->V			// Add this and every line down to IfEnd
+Locate 4,6,"HIGH SCORE:"
+Locate 16,6,List 4[V]
+P->List 4[(Dim List 4)-1]
+SortA(List 4)			// SortA: F4 F3 F1
+(Dim List 4)->V
+If P=List 4[V]
+Then For 1->G To 150
+Next
+ClrText
+For 1->G To 25
+Locate 7,4,"HIGH SCORE!"
+Locate 7,4,"           "
+Next
+IfEnd
+1->Z
+While Z=1
+Getkey=31=>Goto A
+Getkey=47=>Stop
+WhileEnd
+
+
+@@PROG "SN INTRO"		// Create a program called "SN INTRO"
+Lbl 9
+ClrText
+0->A~Z
+25->List 3[2]			// 1.3: add this... default speed
+5->List 3[3]			// 1.3: add this... default nr of lives
+6->List 3[4]			// 1.3: add this... default direction
+For 1->A To 9
+Locate A,3,"S"
+For 1->B To 35
+Next
+Locate A,3," "
+Next
+Locate A,3,"S"
+1->C
+21->A
+While C=1
+Locate A,3,"N"
+Locate A,3," "
+A=10=>Goto 0
+A-1->A
+WhileEnd
+Lbl 0
+Locate A,3,"N"
+7->A
+While C=1
+Locate 11,A,"A"
+A=3=>Goto 1
+For 1->B To 50
+Next
+Locate 11,A," "
+A-1->A
+WhileEnd
+Lbl 1
+For 1->A To 3
+Locate 12,A,"K"
+A=3=>Goto 2
+For 1->B To 50
+Next
+Locate 12,A," "
+Next
+Lbl 2
+21->A
+While C=1
+Locate A,3,"E"
+Locate A,3," "
+A=13=>Goto 3
+A-1->A
+WhileEnd
+Lbl 3
+Locate A,3,"E"
+For 1->A To 10
+Locate 11,4," "
+Locate 11,4,"2"
+Next
+Locate 9,6,"V 1.3"			// v1.3: change this
+Locate 1,7,"(C) 1997 ROLF KLAUSEN"
+Locate 1,1,"F1:START"
+Locate 13,1,"F6:SETUP"
+While 1=1
+Getkey=79=>Return
+If Getkey=29
+Then Prog "SN SETUP"
+Break
+IfEnd
+WhileEnd
+Goto 9
+Return
+
+@@PROG "SN SETUP"
+Lbl 1
+ClrText
+"1. RESET HIGH SCORE"
+"2. SELECT DIFFICULTY"
+"3. SELECT SPEED"
+"4. RETURN TO SNAKE"
+" "
+"CHOICE"?->A
+A=1=>{0,0}->List 4
+A=1=>Goto 1
+A=2=>Goto 3
+A=3=>Goto 4
+A=4=>Goto 2
+A>4=>Goto 1
+A<1=>Goto 1
+Lbl 2
+Return
+Lbl 3
+"1=EASY"
+"2=NORMAL"
+"3=HARD"
+"CHOICE"?->B
+B=1=>7->M
+B=2=>5->M
+B=3=>3->M
+M->List 3[3]
+Goto 1
+Lbl 4
+"  1=FASTEST"
+" 10=FAST"
+" 25=NORMAL"
+" 50=SLOW"
+"100=SLOWEST"
+"SPEED"?->F
+F->List 3[2]
+Goto 1
+
+Note for every level:
+EVERYTHING MUST BE WRITTEN ON ONE SINGLE LINE!!!
+I have written the levels like this so you could see what they look like.
+
+SNLEVEL1:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL2:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL3:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL4:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,1,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL5:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL6:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+SNLEVEL7:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1]
+[1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1]
+[1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+2->List 3[4]					// v1.3: add this!
+
+SNLEVEL8:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+2->List 3[4]					// v1.3: add this!
+
+SNLEVEL9:
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1]
+[1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1]
+[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1]
+[1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1]
+[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+2->List 3[4]					// v1.3: add this!

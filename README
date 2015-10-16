@@ -1,0 +1,14 @@
+A couple of games I made for the Casio calculator in the late 90s.
+I think they were made on a Casio FX-9750.
+
+Uploaded to Github to preserve these for whatever it's worth.
+I'm quite proud of what I achieved back then.
+
+Two games:
+* Snake
+* Snake II
+
+Snake was a simple implementation of the classic snake game.
+Snake II was a more sophisticated version, with several levels and the
+ability to create your own levels!
+The file howto_create_levels.txt explains how to create a level for Snake II.

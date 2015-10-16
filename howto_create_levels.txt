@@ -1,0 +1,36 @@
+So, you wanna create some levels for the wonderful game Snake 2, huh?
+Well, here is a little tutorial which tells you exactly how to do it!
+
+First some level basics:
+The data for each level is stored in Matrix A. Matrix A has one cell for
+each location on the screen. If a cell contains a 1, then that location on
+the screen will have a brick (#) printed on it and you will crash if you
+run into it. If a cell contains a 0 then it is a empty space.
+
+Then I'll tell you how to do it:
+Create a new program. Call it whatever you want. The name is not
+important. In this program you have to fill the matrix with 1's and 0's.
+This is easy. Here is a easy way to do it. Type the following into your
+computer (or use a sheet with squares (in norwegian: et ruteark) or
+whatever):
+
+[
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]->Mat A
+
+Then you change the 0's with 1's where you want a brick to be placed.
+Then you type that into your calculator AND REMEMBER TO WRITE EVERYTHING
+ON 1 SINGLE LINE, NO LINE BREAKS!!!
+
+Another way is to type everything into the calculator on the fly. I hope
+you understand.
+
+If you create a cool level, then mail it to me!
+My email address: rolfk@romsdal.vgs.no
+

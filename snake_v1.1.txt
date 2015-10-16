@@ -1,0 +1,303 @@
+                       SNAKE 1.1
+                           by
+            Rolf Klausen (rolfk@romsdal.vgs.no)
+
+Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/
+Visit my casiopage: htpp://www2.romsdal.vgs.no/~rolfk/casio/
+
+Size:
+Main program:  933 bytes
+Intro program: 374 bytes
+List file:     250 bytes
+Total:        1557 bytes
+
+What's new?
+v1.1: You can now pause the game!
+Press 5 to pause and EXE to continue the game. 
+
+v1.0:
+YES! Now my snake game finally works just the way it is supposed to work!
+The snake grows, if you run into your body you crash and you crash if you
+hit the walls (you always have, even in the beta versions). The snake
+grows correctly (in beta 0.85 it didn't (I'm not sure if I even put that
+version out on the net... did I ?)). When you have eaten the number 9 you
+start on 1 again, but keep your score and the speed increases. Oh I
+nearly forgot: Now the game calculates your score too! The calculations is
+easy: Points = points + (Number eaten)*100
+So if you eat the number 3 you get 300 points added to your score! wow!
+My high score is 88300! Try to beat that one! I have also changed the
+intro a bit, and now I think it is nicer to watch...
+
+The game uses the first 9 cells of list 1 and 2, and the first 2 cells of
+list 3 to store coordinates and score and speed.
+
+Thanx go out to:
+
+Hidetake Jo - I used a slightly modified version of his algorithm for
+efficient coordinate storing - without it I wouldn't been able to make the
+snake grow. Thanx!
+
+Yngve (a friend) for motivating me to write the game; he made me try even
+though I thought I couldn't do it. But I did it!
+
+Everyone who has downloaded, tried or played any of my games and everyone
+who has visited my homepage.
+
+
+Controls:
+8 - Up
+2 - Down
+4 - Left
+6 - Right
+5 - Pause
+EXE - Continue (after you have paused the game)
+
+When you are moving left you can't just press 4 and turn left. You have to
+move either up or down first, then left, and vice versa. The same applies
+to up and down movement. You probably understand... :)
+
+What more enhancements will come:
+
+ALREDY ADDED: * Possibility to pause the game 
+
+* High score table!
+
+* Setup program. With this you can change various things in the game.
+
+If you have ideas for the game then let me know: rolfk@romsdal.vgs.no
+
+
+When all this has been added, then it is time to start working on
+
+              SSSSS        N          N
+             S     S       N N        N
+             S             N  N       N                K   K    EEEEEE
+              S            N   N      N        A       K  K     E
+               SS          N    N     N       A A      K K      E
+                 SS        N     N    N      A   A     KK       EEEE
+                   SS      N      N   N     A     A    K K      E
+             S      S      N       N  N    AAAAAAAAA   K  K     E
+              SSSSSS       N        N N   A         A  K   K    EEEEEE 
+
+
+                        ---------        ---------
+                           III              III
+                           III              III
+                           III              III
+                           III              III
+                           III              III
+                        ---------        ---------
+
+
+Wonderful art, huh?
+
+It means:    SNAKE 2 !!!!!!
+
+What I have planned for snake 2:
+Instead of the usual screen:
+#################
+#               #
+#               #
+#               #
+#################
+
+I will add support for more different levels, so level 2 may look like:
+
+####################
+#                  #
+#                  #
+#     ########     #
+#                  #
+#                  #
+####################
+
+And when you hit any # you crash, got it?
+And you can even add your own levels!!! Fantastic, huh? 
+
+Have you ever played nibbles, the qbasic game which comes with M$-DOG
+(MS-DOS)? My snake game will look almost like nibbles. But you have to be
+patient. Remember that I go to school and don't have that much time. But
+I will put it out as soon as it is finished. Send me a mail if you want me
+to notify you when I have put it out or if you want me to mail you the
+game or something. My email address: rolfk@romsdal.vgs.no
+
+Any comments or suggestions are always welcome.
+I am on the net every tuesday and thursday from 15.00 to 20.00 and
+wednesdays from 11.00 to 12.00. I only have internet access through my
+school, but I get FREE internet access there, so it is a nice offer. but
+anyway, if you send me a mail on a friday for example, I'm not able to
+read it until tuesday...
+
+well, I've nothing more to say about this so here is snake 1.0 final
+release:
+
+************************************************************************
+The symbols:
+
+   ->                   This is the arrow located on the keyboard
+
+    =>                  The double arrow meaning "then".
+                        Press [shift]+[prgm] [F3] [F3]
+
+    <>                  Not equal
+                        Press [shift]+[prgm] [F6] [F3] [F2]
+
+    _                   The little triangle thing on the prgm menu
+                        Press [shift]+[prgm] [F5]
+
+    <=                  Less than or equal
+                        press [shift]+[prgm] [F6] [F3] [F6]
+
+    >=                  Greater than or equal
+                        Press [shift]+[prgm] [F6] [F3] [F5]
+
+    //                  This is a comment. Do not type it in.
+
+***************************************************************************
+
+
+@@PROG "SNAKE"          //create a program called snake
+Prog "SN INTRO"
+Lbl A
+File1			//[shift]+[menu] F6 F6 F4 F1
+{0,50}->List 3		//30 is the speed. The higher the slower the snake is
+Lbl 9
+File1
+ClrText
+{2,2,2,2,2,2,2,2,2}->List 1		// 9 2's
+{2,2,2,2,2,2,2,2,2}->List 2
+0->A~Z
+2->A~B          		// starting coordinates
+6->C          			// direction. 6=left 4=right 8=up 2=down
+1->D~E	
+1->L				
+D+1->I				// I = length of snake.
+List 3[1]->P			// keeps track of your points
+List 3[2]->F			// keeps track of the speed
+Int 18Ran#+2->J			// random coordintes for the number
+Int 4Ran#+2->K                  // same as above
+Locate 1,1,"#####################" 	// 21 #'s
+For 2->H To 7
+Locate 1,H,"#"
+Locate 21,H,"#"
+Next
+Locate 1,7,"#####################"  	// 21 #'s
+While 1=1			// Ever tried to change the value of 1?
+Getkey=62=>C<>8=>2->C
+Getkey=62=>C=8=>8->C
+Getkey=73=>C<>6=>4->C			// changes direction if you are
+Getkey=73=>C=6=>6->C                    // allowed to. You aint allowed
+Getkey=53=>C<>4=>6->C               	// to turn left if you are moving
+Getkey=53=>C=4=>4->C                 	// right, you have to move up or
+Getkey=64=>C<>2=>8->C                 	// down first, then left. The same
+Getkey=64=>C=2=>2->C                    // is with up and down.
+C=6=>A+1->A
+C=4=>A-1->A				// these increases the coordinates
+C=2=>B+1->B				// based on your direction
+C=8=>B-1->B
+For 1->G To F				// a delay loop, used to control
+Next					// speed
+Locate A,B,"O"			// you can change the O to another symbol
+Locate List 1[E],List 2[E]," "
+A->List 1[D]
+B->List 2[D]
+A=1=>Goto 6               // the 4 next lines check if you have it the wall
+B=1=>Goto 6
+A=21=>Goto 6
+B=7=>Goto 6
+For 1->N To I-1			// check if you have run into yourself...
+D<>N=>List 1[D]=List 1[N]=>List 2[D]=List 2[N]=>Goto 6   
+Next
+If A=J And B=K			// check if you have eaten the number
+Then Int 18Ran#+2->J
+int 4Ran#+2->K
+I+1->I				// increase length
+P+(L*100)->P			// increase points
+L+1->L				// increase number
+If L>9				// have you eaten number 9?
+Then P->List 3[I]		// save your points
+F-10->F				// increase speed
+F<=1=>1->F			// make sure speed is never below 1
+F->List 3[2]			// save speed
+Goto 9
+IfEnd
+Locate J,K,L			// write number on random coordinates
+Else Locate J,K,L
+IfEnd
+D+1->D
+E+1->E
+D>=I->1->D
+E>=I=>1->E
+WhileEnd
+Lbl 6
+For 1->G To 5
+Locate A,B,"+"
+Locate A,B,"x"                // The multiplication sign
+Next
+Locate A,B,"O"
+For 1->G To 8
+Locate 8,4,"CRASH!"
+Locate 8,4,"      "
+Next
+Locate 6,4,"GAME OVER"
+Locate 5,5,"SCORE:"
+Locate 11,5,P
+1->Z
+While Z=1
+Getkey=31=>Goto A
+Getkey=47=>Stop
+WhileEnd
+
+
+@@PROG "SN INTRO"		// Create a program called "SN INTRO"
+ClrText
+0->A~Z
+For 1->A To 9
+Locate A,3,"S"
+For 1->B To 35
+Next
+Locate A,3," "
+Next
+Locate A,3,"S"
+1->C
+21->A
+While C=1
+Locate A,3,"N"
+Locate A,3," "
+A=10=>Goto 0
+A-1->A
+WhileEnd
+Lbl 0
+Locate A,3,"N"
+7->A
+While C=1
+Locate 11,A,"A"
+A=3=>Goto 1
+For 1->B To 50
+Next
+Locate 11,A," "
+A-1->A
+WhileEnd
+Lbl 1
+For 1->A To 3
+Locate 12,A,"K"
+A=3=>Goto 2
+For 1->B To 50
+Next
+Locate 12,A," "
+Next
+Lbl 2
+21->A
+While C=1
+Locate A,3,"E"
+Locate A,3," "
+A=13=>Goto 3
+A-1->A
+WhileEnd
+Lbl 3
+Locate A,3,"E"
+Locate 6,5,"VERSION 1.1"
+Locate 1,7,"(C) 1997 ROLF KLAUSEN"
+While Getkey<>31
+WhileEnd
+Return
