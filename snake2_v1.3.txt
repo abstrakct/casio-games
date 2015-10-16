@@ -3,7 +3,7 @@
           |  |/  /        /   /          | |  |__|
           |     |         |  |           | | _____
           |  |\  \         \  \___       | |___| |
-	  |__| \__\ lausen  \_____| asio \_______/ ames
+	      |__| \__\         \_____| asio \_______/ ames
 
 		     is proud to present
 
@@ -29,9 +29,9 @@ Whee! Snake 2 v1.3 is now released! Lots (or at least some) new things.
 
 Snake 2 was written by:
 
-Rolf Klausen <rolfk@romsdal.vgs.no>
-Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/
-Visit my casiopage: http://www2.romsdal.vgs.no/~rolfk/casio/
+Rolf K. 
+Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/       (DEAD link)
+Visit my casiopage: http://www2.romsdal.vgs.no/~rolfk/casio/ (DEAD link)
 
 This is Snake 2 version 1.3
 
@@ -41,7 +41,7 @@ New in version 1.3:
 * The snake now increases the speed when you finish the last level
 * You can now define the starting direction of the snake in each level file.
   See the "how to write levels" file for more info on this.
-* Some minor big fixes
+* Some minor bug fixes
 
 New in version 1.2 (except from the other new things in Snake 2):
 

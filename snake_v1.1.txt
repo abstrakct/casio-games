@@ -1,9 +1,9 @@
                        SNAKE 1.1
                            by
-            Rolf Klausen (rolfk@romsdal.vgs.no)
+                        Rolf K.
 
-Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/
-Visit my casiopage: htpp://www2.romsdal.vgs.no/~rolfk/casio/
+Visit my homepage:  http://www2.romsdal.vgs.no/~rolfk/        (DEAD)
+Visit my casiopage: htpp://www2.romsdal.vgs.no/~rolfk/casio/  (DEAD)
 
 Size:
 Main program:  933 bytes
@@ -119,7 +119,7 @@ Have you ever played nibbles, the qbasic game which comes with M$-DOG
 patient. Remember that I go to school and don't have that much time. But
 I will put it out as soon as it is finished. Send me a mail if you want me
 to notify you when I have put it out or if you want me to mail you the
-game or something. My email address: rolfk@romsdal.vgs.no
+game or something.
 
 Any comments or suggestions are always welcome.
 I am on the net every tuesday and thursday from 15.00 to 20.00 and
@@ -297,7 +297,7 @@ WhileEnd
 Lbl 3
 Locate A,3,"E"
 Locate 6,5,"VERSION 1.1"
-Locate 1,7,"(C) 1997 ROLF KLAUSEN"
+Locate 1,7,"(C) 1997 ROLF K."
 While Getkey<>31
 WhileEnd
 Return
